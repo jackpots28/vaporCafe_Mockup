@@ -39,9 +39,14 @@ namespace winrt::vaporCaffe::implementation
         {
         case 2:
             {
-                auto targetElement = target.as<::winrt::Windows::UI::Xaml::Controls::Button>();
-                this->myButton(targetElement);
-                targetElement.Click({ static_cast<D*>(this), &D::ClickHandler});
+                auto targetElement = target.as<::winrt::Windows::UI::Xaml::Controls::TextBlock>();
+                this->RightText(targetElement);
+            }
+            break;
+        case 3:
+            {
+                auto targetElement = target.as<::winrt::Windows::UI::Xaml::Controls::TextBlock>();
+                this->leftText(targetElement);
             }
             break;
         }

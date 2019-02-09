@@ -24,19 +24,29 @@ namespace winrt::vaporCaffe::implementation
         void UnloadObject(::winrt::Windows::UI::Xaml::DependencyObject const& dependencyObject);
         void DisconnectUnloadedObject(int32_t connectionId);
 
-        ::winrt::Windows::UI::Xaml::Controls::Button myButton()
+        ::winrt::Windows::UI::Xaml::Controls::TextBlock RightText()
         {
-            return _myButton;
+            return _RightText;
         }
-        void myButton(::winrt::Windows::UI::Xaml::Controls::Button value)
+        void RightText(::winrt::Windows::UI::Xaml::Controls::TextBlock value)
         {
-            _myButton = value;
+            _RightText = value;
+        }
+
+        ::winrt::Windows::UI::Xaml::Controls::TextBlock leftText()
+        {
+            return _leftText;
+        }
+        void leftText(::winrt::Windows::UI::Xaml::Controls::TextBlock value)
+        {
+            _leftText = value;
         }
         
     private:
         bool _contentLoaded{false};
 
-        ::winrt::Windows::UI::Xaml::Controls::Button _myButton{nullptr};
+        ::winrt::Windows::UI::Xaml::Controls::TextBlock _RightText{nullptr};
+        ::winrt::Windows::UI::Xaml::Controls::TextBlock _leftText{nullptr};
     };
 }
 

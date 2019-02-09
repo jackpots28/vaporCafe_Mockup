@@ -5,9 +5,42 @@
     xmlns:local="using:vaporCaffe"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Background="#FF818181">
+    mc:Ignorable="d" Background="#FFB4B4B4">
 
+    <!-- Top appbar view -->
+    <Page.TopAppBar>
+        <AppBar Height="60" Background="Black">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" VerticalAlignment="Center" Width="200" FontSize="20" Foreground="White">Hello</TextBlock>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
+
+    <!-- Main form view -->
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="ClickHandler">Click Me</Button>
+        <Grid Height="750" Width="1200" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Left section -->
+            <Border BorderBrush="Black" BorderThickness="5" Grid.Column="0">
+                <Canvas>
+                    <TextBlock x:Name="leftText" TextAlignment="Center" FontSize="90" Canvas.Left="224" Canvas.Top="338" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Left</TextBlock>
+                </Canvas>
+            </Border>
+
+            <!-- Right section -->
+            <Border BorderBrush="White" BorderThickness="5" Grid.Column="2">
+                <Canvas>
+                    <TextBlock x:Name="RightText" TextAlignment="Center" FontSize="90" Canvas.Left="202" Canvas.Top="338">Right</TextBlock>
+                </Canvas>
+            </Border>
+        </Grid>
     </StackPanel>
 </Page>

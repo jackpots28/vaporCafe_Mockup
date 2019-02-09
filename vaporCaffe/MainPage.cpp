@@ -23,15 +23,4 @@ namespace winrt::vaporCaffe::implementation
     }
 
 
-	int counter = 0;
-    void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
-    {
-		if (counter % 2 == 0) {
-			myButton().Content(box_value(L"Clicked\n"));
-		}
-		else {
-			myButton().Content(box_value(L"Click Me"));
-		}
-		counter += 1;
-    }
 }
